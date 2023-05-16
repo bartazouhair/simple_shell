@@ -18,7 +18,7 @@ int _myevnn(info_t *inf)
  * _getenvv - gets the value of an environ variable
  * @inf: Structure containing potential arguments.
  * Used to maintain
- * @nam: env var nm
+ * @nm: env var nm
  * Return: the value
  *
  */
