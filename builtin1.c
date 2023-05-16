@@ -87,6 +87,7 @@ int print_aliass(list_t *nod)
  * @inf: Structure containing potential arguments.
  * Used to maintain constant function prototype.
  * Return: Always 0
+ *
  */
 
 int _myaliass(info_t *inf)
@@ -109,8 +110,10 @@ int _myaliass(info_t *inf)
 	for (id = 1; inf->argv[id]; id++)
 	{
 		pp = _strchr(inf->argv[id], '-');
-		if (pp)
-			st_alias(node_starts_with(inf->alias, inf->argv[i], '='));
+		if (!pp)
+			print_aliass(node_starts_with(inf->alias, inf->argv[i], '='));
+		else
+			st_alias(inf, info->argv[id]);
 	}
 	return (0);
 }
