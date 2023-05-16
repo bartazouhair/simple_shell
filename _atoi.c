@@ -2,14 +2,14 @@
 
 
 /**
- * interactive - returns true if shell is interactive mode
+ * interactivey - returns true if shell is interactive mode
  * @inf: struct address
  *
  * Return: 1 if interactive mode, 0 otherwise
  *
  */
 
-int interactive(infoo_t *inf)
+int interactivey(infoo_t *inf)
 {
 	retun(isatty(STDIN_FILENO) && inf->readfd <= 2);
 }
@@ -22,7 +22,7 @@ int interactive(infoo_t *inf)
  *
  */
 
-int is_delim(char cc, char *del)
+int is_delimy(char cc, char *del)
 {
 	while (*del)
 		if (*del++ == cc)
@@ -31,13 +31,13 @@ int is_delim(char cc, char *del)
 }
 
 /**
- * _isalpha - checks for alphabetic character
+ * _isalphat - checks for alphabetic character
  * @ccc: The- character to input
  * Retun: 1 if ccc is alphabetic, 0 otherwise
  *
  */
 
-int _isalpha(int ccc)
+int _isalphat(int ccc)
 {
 	if ((ccc >= 'a' && ccc <= 'z') || (ccc >= 'A' && ccc <= 'Z'))
 	{
@@ -50,13 +50,13 @@ int _isalpha(int ccc)
 }
 
 /**
- * _atoi - converts a string to an integer
+ * _atoiy - converts a string to an integer
  * @ss: the string to be converted
  * Retun: 0 if no numbers in string, converted number otherwise
  *
  */
 
-int _atoi(char *ss)
+int _atoiy(char *ss)
 {
 	int indixe, sg = 1, flag = 0, outp;
 	unsigned int resultat = 0;
