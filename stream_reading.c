@@ -1,7 +1,9 @@
 #include "shell.h"
 
 /**
- * read_stream - read a line from the stream
+ * stream_reading - read a line from the stream
+ *
+ * Description: This function reads a line from the stream.
  *
  * Return: pointer that points the the read line
  */
