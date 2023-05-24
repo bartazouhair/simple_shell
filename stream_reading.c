@@ -1,13 +1,9 @@
 #include "shell.h"
 
 /**
- * stream_reading - Read a line from the stream
+ * read_stream - read a line from the stream
  *
- * Description: This function reads a line from the stream, dynamically
- * allocating memory as needed to accommodate the line. It continues reading
- * until a newline character is encountered or the end of file (EOF) is reached.
- *
- * Return: Pointer to the read line
+ * Return: pointer that points the the read line
  */
 char *stream_reading(void)
 {
@@ -18,14 +14,12 @@ char *stream_reading(void)
 
 	if (line == NULL)
 	{
-		fprintf(stderr, "allocation error in stream_reading");
+		fprintf(stderr, "allocation error in read_stream");
 		exit(EXIT_FAILURE);
 	}
-
 	while (1)
 	{
-		chart = getchar(); /* Read first character from the stream */
-
+		chart = getchar();
 		if (chart == EOF)
 		{
 			free(line);
@@ -40,17 +34,14 @@ char *stream_reading(void)
 		{
 			line[num] = chart;
 		}
-
 		num++;
-
 		if (num >= size)
 		{
 			size += size;
 			line = realloc(line, size);
-
 			if (line == NULL)
 			{
-				fprintf(stderr, "reallocation error in stream_reading");
+				fprintf(stderr, "reallocation error in read_stream");
 				exit(EXIT_FAILURE);
 			}
 		}
